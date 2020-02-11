@@ -12,9 +12,12 @@ pipeline {
   
   stage ("Build") {
    steps {   
+    dir('newocean') {
     script {
      bat 'mvn compile'
     }  
+}
+    
     }
   }
   
