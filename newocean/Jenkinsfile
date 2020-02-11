@@ -28,9 +28,10 @@ pipeline {
       }  
      }   
     }
-  }
-  
-  post {
+  } 
+ }
+ 
+   post {
    success {
     echo "Sucessful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
    }
@@ -48,9 +49,5 @@ pipeline {
    }
    
   }
-  
-  
- 
- }
 
 }
