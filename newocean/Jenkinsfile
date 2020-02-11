@@ -30,6 +30,25 @@ pipeline {
     }
   }
   
+  post {
+   success {
+    echo "Sucessful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+   }
+   
+   failure {
+    echo "Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+   }
+   
+   changed {
+    echo "Status changed: [From: $currentBuild.previousBuild.result, To:$currentBuild.result"
+   }
+   
+   always {
+    junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+   }
+   
+  }
+  
   
  
  }
