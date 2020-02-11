@@ -22,9 +22,11 @@ pipeline {
   
   stage ("Test") {
    steps { 
-    script {
+    dir('newocean') {
+     script {
       bat 'mvn test'
-      }
+      }  
+     }   
     }
   }
   
