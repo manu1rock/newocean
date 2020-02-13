@@ -36,14 +36,14 @@ pipeline {
      def server = Artifactory.server 'Art_6.17.0'
      
      def downloadSpec = """{
-     "Files": [{
+     "files": [{
                 "pattern": "libs-release-local/*.jar",
                 "target": "libs-release-local/"
      }]
      }"""
      
      def uploadSpec = """{
-     "Files": [{
+     "files": [{
                 "pattern": "libs-release-local/*.jar",
                 "target": "libs-release-local/"
      }]
