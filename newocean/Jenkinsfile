@@ -14,7 +14,7 @@ pipeline {
    steps {   
     dir('newocean') {
      script {
-      bat 'mvn compile'
+      bat 'mvn package'
       }  
     }    
     }
