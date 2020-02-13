@@ -34,7 +34,7 @@ pipeline {
    post {
    success {
     echo "Sucessful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-    archiveArtifacts artifacts: 'target/*.jar', onlyIfSuccessful: true
+    archiveArtifacts artifacts: 'newocean/target/*.jar', onlyIfSuccessful: true
    }
    
    failure {
