@@ -50,7 +50,7 @@ pipeline {
      }"""
      
      def buildInfo1 = server.download spec: downloadSpec
-     def buildinfo2 = server.upload spec: uploadSpec
+     def buildInfo2 = server.upload spec: uploadSpec
      
      buildInfo1.append buildInfo2
      server.publishBuildInfo buildInfo1
